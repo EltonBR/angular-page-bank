@@ -1,0 +1,77 @@
+.topbar-wraper {
+    width: 100%;
+    height: 60px;
+}
+
+.topbar-content {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: var(--color-primary);
+}
+
+.indrau-logo {
+    width: 50px;
+    margin-left: 10px;
+}
+
+
+
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.col-logo {
+    display: flex;
+    width: 80px;
+    align-items: center;
+}
+
+.col-menu {
+    display: flex;
+    width: 520px;
+    align-items: center;
+}
+
+.col-search {
+    display: flex;
+    width: 240px;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.col-buttons {
+    display: flex;
+    width: 280px;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.col-buttons button {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+@media (max-width: 1120px) {
+    //topbar-break
+    .topbar-content {
+        height: 120px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    //mobile css
+}
+
+@media (max-width: 839px) {
+
+    //searchbox line down
+    .col-logo {
+        justify-content: center;
+    }
+}
