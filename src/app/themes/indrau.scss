@@ -8,6 +8,32 @@
     --color-yellow-secondary: #babb02;
 }
 
+
+
+.btn-primary-outline {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+
+    &:hover {
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+        color: #fff;
+    }
+    
+    &:active {
+        background-color: var(--color-primary-hover) !important;
+        border-color: var(--color-primary-hover) !important;
+        color: #fff !important;
+    }
+    
+    &:focus {
+        background-color: var(--color-primary-hover) !important;
+        border-color: var(--color-primary-hover) !important;
+        color: #fff !important;
+    }
+}
+
 .btn-primary {
     background-color: var(--color-primary);
     border-color: var(--color-primary);

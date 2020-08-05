@@ -56,10 +56,12 @@
     animation: fadein 2s;
 }
 
-.col-buttons button {
+.col-buttons a {
     font-size: 13px;
     font-weight: bold;
     height: 38px;
+    display: flex;
+    align-items: center;
 }
 
 .col-btn-menu {

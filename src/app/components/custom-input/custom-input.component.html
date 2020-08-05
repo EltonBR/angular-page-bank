@@ -1,0 +1,4 @@
+<label>
+    {{label}} <sup *ngIf="required" class="text-danger">*</sup>
+</label>
+<input id="{{id}}" maxlength="{{maxlength}}" [mask]="mask" [(ngModel)]="value" type="{{type}}" class="form-control">
