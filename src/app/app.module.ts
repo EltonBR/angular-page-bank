@@ -8,6 +8,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { TopbarModule } from './components/topbar/topbar.module';
 
+import { HomeModule } from './pages/home/home.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -17,7 +19,8 @@ import { TopbarModule } from './components/topbar/topbar.module';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    TopbarModule
+    TopbarModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

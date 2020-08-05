@@ -1,0 +1,96 @@
+@import '../../variables.scss';
+
+.image-banner {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-image: url("/assets/images/bg-landing.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.text-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+    padding-left: 7rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.button-more button {
+    width: 15rem;
+}
+
+@media(max-width: $first-breakpoint-width) {
+    .title {
+        font-size:2.3rem;
+    }
+
+    .subtitle {
+        font-size: 1.7rem;
+    }
+
+    .button-more button {
+        width: 13rem;
+    }
+}
+
+@media(max-width: $second-breakpoint-width) {
+
+    .image-banner {
+        background-size: cover;
+        background-position: center;
+    }
+    .title {
+        font-size:2.0rem;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .button-more button {
+        width: 11rem;
+    }
+}
+
+@media(max-width: $mobile-breakpoint-width) {
+
+    .image-banner {
+        background-size: cover;
+        background-position: center;
+    }
+    .title {
+        margin-top: 4rem;
+        font-size:1.6rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .button-more button {
+        width: 10rem;
+        font-size: 1rem;
+    }
+
+    .text-container {
+        padding-left:3rem;
+        padding-right:3rem;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+    }
+}
