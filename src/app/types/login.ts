@@ -1,4 +1,4 @@
 export default interface ILogin {
-    email: string;
-    password: string;
+    agency: string;
+    account: string;
 };

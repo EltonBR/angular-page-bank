@@ -17,6 +17,7 @@ import { InMemoryApiService } from './services/in-memory-api.service';
 //pages
 import { HomeModule } from './pages/home/home.module';
 import { CreateAccountModule } from './pages/create-account/create-account.module';
+import { LoginModule } from './pages/login/login.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CreateAccountModule } from './pages/create-account/create-account.modul
     NgbModule,
     FontAwesomeModule,
     HomeModule,
-    CreateAccountModule
+    CreateAccountModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
