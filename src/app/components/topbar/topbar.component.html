@@ -1,20 +1,24 @@
 <div class="topbar-wraper">
-    <div class="topbar-content">
+    <div class="topbar-content topbar-open" [ngClass]="{'topbar-open':toggleMenu}">
         <div class="flex-grid">
             <div class="col-logo">
                 <img src="assets/images/logo.png" class="indrau-logo" />
             </div>
-            <div class="col-menu">
+            <div class="col-menu" [ngClass]="{'anim-show ':toggleMenu, 'anim-hide':!toggleMenu}">
                 <app-menu-links></app-menu-links>
             </div>
             <div class="col-search">
                 <app-search-box></app-search-box>
             </div>
-            <div class="col-buttons">
+            <div class="col-buttons" [ngClass]="{'anim-show ':toggleMenu, 'anim-hide':!toggleMenu}">
                 <button type="button" class="btn btn-secondary">Abrir Minha conta</button>
                 <button type="button" class="btn btn-light">Acesse sua conta</button>
+            </div>
+            <div class="col-btn-menu">
+                <button type="button" id="btn-toggle-menu" (click)="toggleMenu = !toggleMenu" class="btn btn-secondary">
+                    <fa-icon [icon]="faBars"></fa-icon>
+                </button>
             </div>
         </div>
     </div>
 </div>
-

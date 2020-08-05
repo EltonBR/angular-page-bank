@@ -1,0 +1,53 @@
+
+:root {
+    --color-primary: #EC7000;
+    --color-primary-hover: #ED7E19;
+    --color-secondary: #003399;
+    --color-secondary-hover: #012469;
+    --color-yellow: #feff01;
+    --color-yellow-secondary: #babb02;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+
+    &:hover {
+        background-color: var(--color-primary-hover);
+        border-color: var(--color-primary-hover);
+    }
+    
+    &:active {
+        background-color: var(--color-primary-hover) !important;
+        border-color: var(--color-primary-hover) !important;
+    }
+    
+    &:focus {
+        background-color: var(--color-primary-hover) !important;
+        border-color: var(--color-primary-hover) !important;
+    }
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-yellow);
+
+    &:hover {
+        background-color: var(--color-secondary-hover);
+        border-color: var(--color-secondary-hover);
+        color: var(--color-yellow-secondary);
+    }
+    
+    &:active {
+        background-color: var(--color-secondary-hover) !important;
+        border-color: var(--color-secondary-hover) !important;
+        color: var(--color-yellow-secondary) !important;
+    }
+    
+    &:focus {
+        background-color: var(--color-secondary-hover) !important;
+        border-color: var(--color-secondary-hover) !important;
+        color: var(--color-yellow-secondary) !important;
+    }
+}

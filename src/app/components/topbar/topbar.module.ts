@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { SearchBoxModule } from './../search-box/search-box.module';
 import { MenuLinksModule } from './../menu-links/menu-links.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [TopbarComponent],
@@ -12,7 +13,8 @@ import { MenuLinksModule } from './../menu-links/menu-links.module';
     CommonModule,
     NgbModule,
     SearchBoxModule,
-    MenuLinksModule
+    MenuLinksModule,
+    FontAwesomeModule
   ],
   exports: [TopbarComponent]
 })

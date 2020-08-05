@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     CommonModule,
     FontAwesomeModule
-  ],exports: [SearchBoxComponent]
+  ],
+  exports: [SearchBoxComponent]
 })
 export class SearchBoxModule { }
