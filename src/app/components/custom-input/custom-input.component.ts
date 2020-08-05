@@ -1,5 +1,6 @@
 import { Component, OnInit, forwardRef, Injector, Input } from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-custom-input',
@@ -25,17 +26,24 @@ export class CustomInputComponent implements ControlValueAccessor {
   onChange: any = () => {}
   onTouch: any = () => {}
   valInput = ""
+  control: FormControl;
+  constructor() {
+    this.control = new FormControl('input');
+  }
 
-  constructor() { }
-
-  set value(valInput: any){ 
-    this.valInput = valInput;
-    this.onChange(valInput)
-    this.onTouch(valInput)
+  ngOnInit() {
+    this.control.valueChanges.subscribe((value) => {
+      this.onChange(value)
+      this.onTouch(value)
+    });
   }
 
   writeValue(value: any) { 
-    this.value = value
+    if (value === null) {
+      this.control.reset();
+      return;
+    }
+    this.control.setValue(value);
   }
 
   registerOnChange(fn: any) {

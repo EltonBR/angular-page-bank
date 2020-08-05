@@ -1,0 +1,7 @@
+<div class="messages-wrapper" *ngIf="control.touched">
+    <small class="text-danger" *ngIf="control.errors?.required">{{required}}</small>
+    <small class="text-danger" *ngIf="control.errors?.minlength">{{min}}</small>
+    <small class="text-danger" *ngIf="control.errors?.maxlength">{{max}}</small>
+    <small class="text-danger" *ngIf="control.errors?.email">{{email}}</small>
+    <small class="text-danger" *ngIf="notEqual">{{mismatch}}</small>
+</div>

@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CustomInputModule } from '../../components/custom-input/custom-input.module';
+import { FormMsgValidatorModule } from '../../components/form-msg-validator/form-msg-validator.module';
 
 @NgModule({
   declarations: [CreateAccountComponent],
@@ -17,7 +18,8 @@ import { CustomInputModule } from '../../components/custom-input/custom-input.mo
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    CustomInputModule
+    CustomInputModule,
+    FormMsgValidatorModule
   ]
 })
 export class CreateAccountModule { }
