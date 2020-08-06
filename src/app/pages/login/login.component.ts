@@ -11,9 +11,9 @@ import ILogin from '../../types/login';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  
+
   faSpinner = faSpinner;
-  loadingLogin: boolean = false;
+  loadingLogin = false;
 
   loginData: ILogin;
   loginForm: FormGroup;
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.fBuilder.group({
       agency: ['', Validators.required],
       account: ['', Validators.required]
-    })
+    });
   }
 
   ngOnInit(): void {
@@ -36,15 +36,16 @@ export class LoginComponent implements OnInit {
 
     this.loadingLogin = true;
     this.loginData = {
-      agency  :this.loginForm.value.agency,
-      account :this.loginForm.value.account,
-    }
+      agency: this.loginForm.value.agency,
+      account: this.loginForm.value.account,
+    };
 
     this.http.login(this.loginData).subscribe((response) => {
       this.loginForm.reset();
       this.formHelper.AllUntouched(this.loginForm);
+
       this.loadingLogin = false;
-      alert("Login success");
+      alert('Login success');
 
     }, (err) => {
       this.loadingLogin = false;

@@ -8,26 +8,27 @@ export class InMemoryApiService implements InMemoryDbService {
 
   constructor() { }
 
-  createDb() {
-    let accounts = [
+  createDb(): any {
+    const accounts = [
       {
-        id        : 1,
-        name      : '',
-        cpf       : '',
-        cellphone : '',
-        email     : '',
-        birthdate : '',
-        password  : ''
+        id: 1,
+        name: '',
+        cpf: '',
+        cellphone: '',
+        email: '',
+        birthdate: '',
+        password: ''
       }
     ];
 
-    let logins = [
+    const logins = [
       {
-        'id': 1,
-        'agency': '2020',
-        'account': '459820'
+        id: 1,
+        agency: '2020',
+        account: '459820'
       }
-    ];  
+    ];
+
     return {
       accounts: accounts,
       login: logins

@@ -14,31 +14,35 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl } from '@angular/f
     }
   ]
 })
-export class CustomInputComponent implements ControlValueAccessor {
-  
-  @Input() label:string;
+export class CustomInputComponent implements ControlValueAccessor, OnInit {
+  valInput = '';
+
+  @Input() label: string;
   @Input() id: string;
   @Input() mask: string;
   @Input() maxlength: number;
-  @Input() type: string = "text";
-  @Input() required: boolean = false;
+  @Input() type = 'text';
+  @Input() required = false;
 
-  onChange: any = () => {}
-  onTouch: any = () => {}
-  valInput = ""
   control: FormControl;
+
+  onChange: any = () => {};
+  onTouch: any = () => {};
   constructor() {
+
     this.control = new FormControl('');
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+
     this.control.valueChanges.subscribe((value) => {
-      this.onChange(value)
-      this.onTouch(value)
+      this.onChange(value);
+      this.onTouch(value);
     });
   }
 
-  writeValue(value: any) { 
+  writeValue(value: any): void {
+
     if (value === null) {
       this.control.reset();
       return;
@@ -46,12 +50,12 @@ export class CustomInputComponent implements ControlValueAccessor {
     this.control.setValue(value);
   }
 
-  registerOnChange(fn: any) {
-    this.onChange = fn
+  registerOnChange(fn: any): void {
+    this.onChange = fn;
   }
 
-  registerOnTouched(fn: any) {
-    this.onTouch = fn
+  registerOnTouched(fn: any): void {
+    this.onTouch = fn;
   }
 
 }

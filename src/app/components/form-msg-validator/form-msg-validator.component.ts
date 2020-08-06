@@ -8,25 +8,24 @@ import { FormControl } from '@angular/forms';
 })
 export class FormMsgValidatorComponent implements OnInit {
 
-  @Input() required             : string = "Este campo é obrigatorio";
-  @Input() min                  : string = "texto pequeno";
-  @Input() max                  : string = "texto muito grande";
-  @Input() email                : string = "Email Inválido";
-  @Input() mismatch             : string = "os campos não comferem";
+  @Input() required = 'Este campo é obrigatorio';
+  @Input() min = 'texto pequeno';
+  @Input() max = 'texto muito grande';
+  @Input() email = 'Email Inválido';
+  @Input() mismatch = 'os campos não comferem';
+  @Input() control: FormControl;
+  @Input() controlCompareValue: FormControl;
 
-  @Input() control              : FormControl;
-  @Input() controlCompareValue  : FormControl;
+  notEqual = false;
 
-  notEqual: boolean = false;
-
-  constructor() {
-   
-  }
+  constructor() {}
 
   ngOnInit(): void {
     if (this.controlCompareValue) {
       this.controlCompareValue?.valueChanges.subscribe((value) => {
-        if(this.control.value !== value) {
+
+        if (this.control.value !== value) {
+
           this.notEqual = true;
         } else {
           this.notEqual = false;
@@ -34,7 +33,9 @@ export class FormMsgValidatorComponent implements OnInit {
       });
 
       this.control.valueChanges.subscribe((value) => {
-        if(this.controlCompareValue?.value !== value) {
+
+        if (this.controlCompareValue?.value !== value) {
+
           this.notEqual = true;
         } else {
           this.notEqual = false;

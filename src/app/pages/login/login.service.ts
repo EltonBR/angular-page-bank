@@ -12,7 +12,7 @@ export class LoginService {
   baseUrl = environment.baseUrl;
   options = {
     headers: {
-      'accept': 'application/json',
+      accept: 'application/json',
       'content-type': 'application/json'
     }
   };

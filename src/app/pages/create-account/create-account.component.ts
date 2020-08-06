@@ -41,25 +41,29 @@ export class CreateAccountComponent implements OnInit {
   submitCreateAccount(): void {
 
     if (this.registerForm.valid === false) {
-      window.scrollTo(0,0);
+
+      window.scrollTo(0, 0);
       this.formHelper.validateAllFormFields(this.registerForm);
       return;
     }
 
     this.loadingRegister = true;
 
-    let formValue = this.registerForm.value;
+    const formValue = this.registerForm.value;
 
     this.accountData = {
-      name            : formValue.fullName,
-      cpf             : formValue.cpf,
-      cellphone       : formValue.cellphone,
-      email           : formValue.email,
-      birthdate       : formValue.birthdate,
-      password        : formValue.password
+      name             : formValue.fullName,
+      cpf              : formValue.cpf,
+      cellphone        : formValue.cellphone,
+      email            : formValue.email,
+      birthdate        : formValue.birthdate,
+      password         : formValue.password,
+      acceptTerms      : formValue.acceptTerms,
+      acceptNewsletter : formValue.acceptNewsletter,
     };
 
     this.api.createAccount(this.accountData).subscribe((response) => {
+
       this.loadingRegister = false;
       this.registerForm.reset();
       this.formHelper.AllUntouched(this.registerForm);
@@ -69,7 +73,7 @@ export class CreateAccountComponent implements OnInit {
     }, (err) => {
       this.loadingRegister = false;
       console.log(err);
-    })
+    });
   }
 
   ngOnInit(): void {

@@ -8,7 +8,7 @@ export class FormHelperService {
 
   constructor() { }
 
-  validateAllFormFields(formGroup: FormGroup) {
+  validateAllFormFields(formGroup: FormGroup): void {
     Object.keys(formGroup.controls).forEach(field => {
       const control = formGroup.get(field);
       if (control instanceof FormControl) {
@@ -19,7 +19,7 @@ export class FormHelperService {
     });
   }
 
-  AllUntouched(formGroup: FormGroup) {
+  AllUntouched(formGroup: FormGroup): void {
     Object.keys(formGroup.controls).forEach(field => {
       const control = formGroup.get(field);
       if (control instanceof FormControl) {

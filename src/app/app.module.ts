@@ -11,10 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { environment } from './../environments/environment';
 
-//mock
+// mock
 import { InMemoryApiService } from './services/in-memory-api.service';
 
-//pages
+// pages
 import { HomeModule } from './pages/home/home.module';
 import { CreateAccountModule } from './pages/create-account/create-account.module';
 import { LoginModule } from './pages/login/login.module';
