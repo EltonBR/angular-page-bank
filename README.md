@@ -2,8 +2,8 @@
 
 Aplicativo em angular baseada no banco itaú
 
-### video:
-https://youtu.be/wXkLdSSW-NU
+### video: (exibindo a versão mobile e testando os formulários)
+https://youtu.be/wXkLdSSW-NU 
 
 ## Preview
 
