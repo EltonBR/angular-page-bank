@@ -1,0 +1,44 @@
+@import '../../animations.scss';
+
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color: var(--color-secondary);
+}
+
+.login-card {
+    width: 350px;
+    border: 0px;
+    animation: scaleup 600ms;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 50px;
+}
+
+.bg-color-primary {
+    background-color: var(--color-primary);
+}
+
+.btn-login {
+    width: 100%;
+}
+
+.btn-return {
+    width: 100%;
+    margin-top: 5px;
+}
+
+@media (max-width: 349px) {
+    .login-card {
+        width: 90%;
+    }
+}

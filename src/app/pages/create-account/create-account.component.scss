@@ -1,3 +1,5 @@
+@import '../../animations.scss';
+
 .page-wrapper {
     background-color: #f0f0f0;
     min-height: 100vh;
@@ -5,6 +7,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .create-account-header {
@@ -20,21 +23,28 @@
 .title {
     color:#fff;
     margin-bottom:0px;
+    animation: fadein 2s;
 }
 
 .subtitle {
     color:#fff;
+    animation: fadein 4s;
 }
 
 .form-wrapper {
     width: 900px;
     margin-top: -50px;
+    animation: scaleup 1s;
 }
 
 .checkboxes-wrapper {
     border-top: 1px solid #ddd;
     padding-top: 8px;
     margin-bottom: 10px;
+}
+
+.m-t-20 {
+    margin-top:20px;
 }
 
 @media (max-width: 900px) {

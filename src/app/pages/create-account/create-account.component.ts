@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormHelperService } from './../../services/form-helper.service';
 import ICreateAccount from '../../types/create-account';
 import { CreateAccountService } from './create-account.service';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-create-account',
@@ -11,7 +12,11 @@ import { CreateAccountService } from './create-account.service';
   styleUrls: ['./create-account.component.scss']
 })
 export class CreateAccountComponent implements OnInit {
+  loadingRegister = false;
+
   faCalendar = faCalendar;
+  faSpinner  = faSpinner;
+
   registerForm: FormGroup;
   accountData: ICreateAccount;
 
@@ -41,6 +46,8 @@ export class CreateAccountComponent implements OnInit {
       return;
     }
 
+    this.loadingRegister = true;
+
     let formValue = this.registerForm.value;
 
     this.accountData = {
@@ -53,11 +60,14 @@ export class CreateAccountComponent implements OnInit {
     };
 
     this.api.createAccount(this.accountData).subscribe((response) => {
-      alert('Conta Criada');
+      this.loadingRegister = false;
       this.registerForm.reset();
       this.formHelper.AllUntouched(this.registerForm);
       console.log(response);
+      alert('Conta Criada');
+
     }, (err) => {
+      this.loadingRegister = false;
       console.log(err);
     })
   }

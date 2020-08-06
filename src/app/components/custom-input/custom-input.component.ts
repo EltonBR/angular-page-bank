@@ -28,7 +28,7 @@ export class CustomInputComponent implements ControlValueAccessor {
   valInput = ""
   control: FormControl;
   constructor() {
-    this.control = new FormControl('input');
+    this.control = new FormControl('');
   }
 
   ngOnInit() {

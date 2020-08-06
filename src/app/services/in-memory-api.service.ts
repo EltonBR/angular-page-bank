@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import ILogin from '../types/login';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InMemoryApiService implements InMemoryDbService {
-  logins: ILogin[];
+
   constructor() { }
 
   createDb() {
@@ -22,15 +21,16 @@ export class InMemoryApiService implements InMemoryDbService {
       }
     ];
 
-    this.logins = [
+    let logins = [
       {
+        'id': 1,
         'agency': '2020',
         'account': '459820'
       }
     ];  
     return {
       accounts: accounts,
-      login: this.logins
+      login: logins
     };
   }
 }

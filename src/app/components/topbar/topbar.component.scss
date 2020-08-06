@@ -1,4 +1,5 @@
 @import '../../variables.scss';
+@import '../../animations.scss';
 
 .topbar-wraper {
     width: 100%;
@@ -154,42 +155,5 @@
     //searchbox line down
     .col-logo {
         justify-content: center;
-    }
-}
-
-/* animaitons */
-@keyframes scaleup {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-@keyframes scaledown {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(0);
-    }
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeout {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
     }
 }

@@ -105,7 +105,7 @@
                             >
                             </app-form-msg-validator>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check m-t-20">
                             <input formControlName="acceptNewsletter" class="form-check-input" type="checkbox" id="accept-newsletter">
                             <label class="form-check-label" for="accept-newsletter">
                                 Desejo receber mais informações sobre  investimentos via SMS ou e-mail
@@ -118,8 +118,8 @@
                     </small>
                 </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary">
-                    Criar Conta
+                <button [disabled]="loadingRegister" type="submit" class="btn btn-primary">
+                    <fa-icon *ngIf="loadingRegister" [icon]="faSpinner" [spin]="true"></fa-icon> Criar Conta
                 </button>
             </div>
             </form>

@@ -26,7 +26,7 @@ import { LoginModule } from './pages/login/login.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    environment.production ? [] : HttpClientInMemoryWebApiModule.forRoot(InMemoryApiService),
+    environment.production ? [] : HttpClientInMemoryWebApiModule.forRoot(InMemoryApiService, {delay: 1000}),
     AppRoutingModule,
     NgxMaskModule.forRoot(),
     NgbModule,
