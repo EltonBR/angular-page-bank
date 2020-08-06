@@ -1,5 +1,14 @@
 # AngularPageBank
 
+Aplicativo em angular baseada no banco itaú
+
+### video:
+https://youtu.be/wXkLdSSW-NU
+
+## Preview
+
+![demo](https://media.giphy.com/media/YqtsBMar46WN8yd9OI/giphy.gif)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
 
 ## Development server
